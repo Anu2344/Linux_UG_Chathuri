@@ -21,10 +21,10 @@ _Steps to Complete the Task_
 ![](images/Assignement1/img%205.png)
 
 4. Create a GitHub Repository
-![](images/Assignement1/img%201.png)
+![](images/Assignement1/img%206.png)
 
 **Key Learnings**
 
-Successfully set up a Linux VM in Azure.
-Configured SSH for secure remote access.
+Successfully set up a Linux VM in Azure.</br>
+Configured SSH for secure remote access.</br>
 Used GitHub for documenting and sharing tasks, establishing a foundation for version control and collaboration.
