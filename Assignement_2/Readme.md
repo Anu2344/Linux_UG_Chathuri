@@ -49,7 +49,7 @@ Created the directory:
 
 *ls -p /sys/kernel | grep -v / >> ~/notedir/listing.md*
 
-![](/Image_2/image_1.png)
+![](Assignment_2/Image_2/image_1.png)
 
 ![](/Image_2/image_2.png)
 
