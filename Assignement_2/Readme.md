@@ -49,21 +49,21 @@ Created the directory:
 
 *ls -p /sys/kernel | grep -v / >> ~/notedir/listing.md*
 
-![](Assignment_2/Image_2/image_1.png)
+![1](Image_2/image_1.png)
 
-![](/Image_2/image_2.png)
+![2](Image_2/image_2.png)
 
-![](/Image_2/image_3.png)
+![3](Image_2/image_3.png)
 
-![](/Image_2/image_4.png)
+![4](Image_2/image_4.png)
 
-![](/Image_2/image_5.png)
+![5](Image_2/image_5.png)
 
-![](/Image_2/image_6.png)
+![6](Image_2/image_6.png)
 
-![](/Image_2/image_7.png)
+![7](Image_2/image_7.png)
 
-![](/Image_2/listing.md.png)
+![Listing.md](Image_2/listing.md.png)
 
 **Challenges and Resolutions**
 </br>
