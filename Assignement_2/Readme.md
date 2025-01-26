@@ -48,3 +48,32 @@ Created the directory:
 >Saved the output to the .md file:
 
 *ls -p /sys/kernel | grep -v / >> ~/notedir/listing.md*
+
+![](/Image_2/image_1.png)
+
+![](/Image_2/image_2.png)
+
+![](/Image_2/image_3.png)
+
+![](/Image_2/image_4.png)
+
+![](/Image_2/image_5.png)
+
+![](/Image_2/image_6.png)
+
+![](/Image_2/image_7.png)
+
+![](/Image_2/listing.md.png)
+
+**Challenges and Resolutions**
+</br>
+1. Access Denied While Creating .md File
+
+Issue: Attempting to create listing.md in a directory without write permissions.</br>
+*Solution: Redirected output to a writable directory (~/notedir).*</br>
+
+2. Misuse of mkdir Command
+
+Issue: Attempted to create a directory with a .md extension (~notedir.md), which caused confusion.</br>
+*Solution: Used mkdir ~/notedir to create a valid directory and saved the .md file inside it.*
+
