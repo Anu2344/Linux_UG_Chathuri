@@ -1,6 +1,6 @@
-# Markdown and Linux Exercise
+# Markdown - Linux Exercise
 
-## Author - Udalamaththa Gamage Chathuri - BEIRP24A6
+## Udalamaththa Gamage Chathuri - BEIRP24A6
 
 ---
 
