@@ -67,9 +67,9 @@ packages:
   - vim
 ```
 
-Now, launch a new instance using this configuration:
+launch a new instance using this configuration:
 
-```bash
+```
 multipass launch --name custom-vm --cloud-init cloud-init.yaml
 ```
 
@@ -80,47 +80,44 @@ multipass launch --name custom-vm --cloud-init cloud-init.yaml
 Multipass allows mounting host directories inside instances.
 
 #### **Example: Mounting a Shared Folder**
-```bash
+```
 multipass mount ~/shared-folder custom-vm:/mnt/shared
 ```
-Now, inside your Multipass instance, access the shared folder:
-```bash
+Inside the Multipass instance, access the shared folder:
+```
 cd /mnt/shared
 ```
 
 To unmount the shared folder:
-```bash
+```
 multipass umount custom-vm:/mnt/shared
 ```
 
-![alt](/1.png)
-![alt](/2.png)
-![alt](/3.png)
-![alt](/4.png)
-![alt](/5.png)
-![alt](/6.png)
-```
-```
-![alt](/init.png)
-![alt](/init launch.png)
-![alt](/init yaml.png)
-![alt](/init%20launch%20confirmation.png)
-![alt](/init%201.png)
+![alt](image/1.png)
+![alt](image/2.png)
+![alt](image/3.png)
+![alt](image/4.png)
+![alt](image/5.png)
+![alt](image/6.png)
 
-````
-````
-![alt](/inside%20instance%20folder%20-no%20text%20file%20yet.png)
-![alt](/final%20testfile.png)
+![alt](image/init.png)
+![alt](image/init%20launch.png)
+![alt](image/init%20yaml.png)
+![alt](image/init%20launch%20confirmation.png)
+![alt](image/init%201.png)
+
+
+![alt](image/inside%20instance%20folder%20-no%20text%20file%20yet.png)
+![alt](image/final%20testfile.png)
 
 ````
 Policy: Create a shared folder and access it from both your host and your Multipass instance.
 ````
-![alt](/inside%20instance%20folder%20-text%20file.png)
-![alt](/Create%20a%20shared%20folder.png)
+![alt](image/inside%20instance%20folder%20-text%20file.png)
+![alt](image/Create%20a%20shared%20folder.png)
 
 
-```
-```
+----
 # Part 3: Exploring LXD
 
 ## **Introduction**
@@ -131,14 +128,14 @@ Policy: Create a shared folder and access it from both your host and your Multip
 ## **Setup: Installing and Enabling LXD**
 To install LXD, run the following commands:
 
-```bash
+```
 sudo apt update
 sudo apt install lxd -y
 ```
 
 After installation, initialize LXD:
 
-```bash
+```
 lxd init
 ```
 ---
@@ -170,11 +167,10 @@ lxd init
 | `lxc network list` | List available networks. |
 | `lxc storage list` | List available storage pools. |
 
-![alt](/Q3_1.png)
+![alt](image/Q3_1.png)
 
 
-```
-```
+
 # Part 4: How to Stick Apps with Docker
 
 ## **Introduction**
@@ -186,7 +182,7 @@ lxd init
 To install Docker on your system, follow these steps:
 
 ### **For Ubuntu (Linux)**
-```bash
+```
 sudo apt update
 sudo apt install -y docker.io
 sudo systemctl enable --now docker
@@ -208,7 +204,7 @@ newgrp docker
 ## **Experiment: Docker Hands-On**
 ### **1. Create a Simple Docker Application**
 1. Create a project folder:
-   ```bash
+   ```
    mkdir my-docker-app && cd my-docker-app
    ```
 2. Create a `Dockerfile`:
@@ -230,26 +226,22 @@ newgrp docker
    ```
 
 3. Build the Docker image:
-   ```bash
+   ```
    docker build -t my-node-app .
    ```
 
 4. Run the container:
-   ```bash
+   ```
    docker run -d -p 3000:3000 my-node-app
    ```
 
 5. Access the app:
    Open **http://localhost:3000** in your browser.
 
-   ![alt](/4.Docker_1.png)
-   ![alt](/4.Docker_2.png)
-   ![alt](/4.Docker_3.png)
+   ![alt](image/4.Docker_1.png)
+   ![alt](image/4.Docker_2.png)
+   ![alt](image/4.Docker_3.png)
 
-
-
-```
-```
 # Part 5: Snaps for Self-Contained Applications
 
 ## **Introduction**
@@ -272,17 +264,17 @@ newgrp docker
 ## **Installation: Setting Up Snapcraft**
 ### **For Ubuntu**
 Run the following commands to install Snapcraft:
-```bash
+```
 sudo apt update
 sudo apt install snapcraft -y
 ```
 Alternatively, install Snapcraft using Snap:
-```bash
+```
 sudo snap install snapcraft --classic
 ```
 
 Verify installation:
-```bash
+```
 snapcraft --version
 ```
 
@@ -290,25 +282,25 @@ snapcraft --version
 
 ## **Experiment: Creating a Simple Snap**
 ### **1. Create a Project Directory**
-```bash
+```
 mkdir my-snap-app && cd my-snap-app
 ```
 
 ### **2. Create an Application Script**
 1. Create a `bin` folder and a script file:
-   ```bash
+   ```
    mkdir bin
    nano bin/hello-snap
    ```
 2. Add the following script:
-   ```bash
+   ```
    #!/bin/bash
    echo "Hello, Snap!"
    ```
 3. Save and exit (Press **CTRL+X**, then **Y**, then **Enter**).
 
 4. Make the script executable:
-   ```bash
+   ```
    chmod +x bin/hello-snap
    ```
 
@@ -316,7 +308,7 @@ mkdir my-snap-app && cd my-snap-app
 
 ### **3. Create the Snapcraft YAML File**
 Create a `snapcraft.yaml` file:
-```bash
+```
 nano snapcraft.yaml
 ```
 Add the following content:
@@ -344,7 +336,7 @@ parts:
 
 ### **4. Build the Snap Package**
 Run the following command to build the Snap:
-```bash
+```
 snapcraft
 ```
 If prompted, install required dependencies.
@@ -353,21 +345,21 @@ If prompted, install required dependencies.
 
 ### **5. Install and Run the Snap**
 Once built, install the generated `.snap` file:
-```bash
+```
 sudo snap install my-snap-app_1.0_amd64.snap --dangerous
 ```
 The `--dangerous` flag is needed because the Snap is not from the official store.
 
 Run the application:
-```bash
+```
 my-snap-app.hello
 ```
 You should see:
-```bash
+```
 Hello, Snap!
 ```
 
-![alt](/Q_5.png)
+![alt](image/Q_5.png)
 
 
 
